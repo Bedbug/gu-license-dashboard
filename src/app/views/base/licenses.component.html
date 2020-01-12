@@ -21,15 +21,16 @@
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor = "let license of licenses; let i = index">
-              <td>{{license.productName}}</td>
-              <td>{{license.userName}}</td>
-              <td>{{license.validFrom}}</td>
-              <td>{{license.validTo}}</td>
-              <td>
-                <span class="badge badge-success" *ngIf="!license.isDeleted">Active</span>
-                <span class="badge badge-danger" *ngIf="license.isDeleted">Deleted</span>
-              </td>
+            <tr *ngFor="let license of licenses; let i = index">
+              
+                <td><a routerLink="/base/license/{{license.id}}" [state]="license">{{license.productName}}</a></td>
+                <td>{{license.userName}}</td>
+                <td>{{license.validFrom}}</td>
+                <td>{{license.validTo}}</td>
+                <td>
+                  <span class="badge badge-success" *ngIf="!license.isDeleted">Active</span>
+                  <span class="badge badge-danger" *ngIf="license.isDeleted">Deleted</span>
+                </td>              
             </tr>
             <!--<tr>
               <td>Sportimo3 Production</td>

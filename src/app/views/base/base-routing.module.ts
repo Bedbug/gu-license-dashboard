@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { LicensesComponent } from './licenses.component';
+import { LicenseComponent } from './license.component';
 
 const routes: Routes = [
   {
@@ -19,6 +20,13 @@ const routes: Routes = [
         component: LicensesComponent,
         data: {
           title: 'Licenses'
+        }
+      },
+      {
+        path: 'license/:id',
+        component: LicenseComponent,
+        data: {
+          title: 'License'
         }
       }
     ]

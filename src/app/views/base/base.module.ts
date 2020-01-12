@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 
 import { LicensesComponent } from './licenses.component';
+import { LicenseComponent } from './license.component';
 
 
 // Popover Component
@@ -26,7 +27,8 @@ import { BaseRoutingModule } from './base-routing.module';
     TooltipModule.forRoot()
   ],
   declarations: [
-    LicensesComponent
+    LicensesComponent,
+    LicenseComponent
   ]
 })
 export class BaseModule { }

@@ -1,0 +1,62 @@
+<div class="app-body">
+  <main class="main d-flex align-items-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 mx-auto">
+          <form #form="ngForm">
+            <div class="card mx-4">
+              <div class="card-header">
+                <h3>
+                  <i class="cui-credit-card"> License </i> {{license.id}}
+                </h3>
+              </div>
+              <div class="card-body p-4">
+                <!--<p class="text-muted">Create your account</p>-->
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="icon-user"></i></span>
+                  </div>
+                  <input type="text" class="form-control" name="userName" [(ngModel)]="license.userName" placeholder="Username" autocomplete="username" required>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">@</span>
+                  </div>
+                  <input type="text" class="form-control" name="userEmail" [(ngModel)]="license.userEmail" placeholder="User Email" autocomplete="email">
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="icon-puzzle"></i></span>
+                  </div>
+                  <input type="text" class="form-control" name="productName" [(ngModel)]="license.productName" placeholder="Product Name" autocomplete="product-name" required>
+                </div>
+                <div class="input-group mb-4">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="icon-control-start"></i></span>
+                  </div>
+                  <input type="date" class="form-control" name="validFrom" [(ngModel)]="license.validFrom" placeholder="Valid from" autocomplete="valid-from">
+                </div>
+                <div class="input-group mb-4">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="icon-control-end"></i></span>
+                  </div>
+                  <input type="date" class="form-control" name="validTo" [(ngModel)]="license.validTo" placeholder="Valid until" autocomplete="valid-until">
+                </div>
+              </div>
+              <div class="card-footer p-4">
+                <div class="row">
+                  <div class="col-6">
+                    <button class="btn btn-block btn-success" type="button" (click)="update(form)"><span>Update</span></button>
+                  </div>
+                  <div class="col-6">
+                    <button class="btn btn-block btn-danger" type="button" (click)="delete(form)"><span>Delete</span></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
