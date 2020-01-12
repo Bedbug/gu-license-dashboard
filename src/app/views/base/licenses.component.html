@@ -1,0 +1,48 @@
+<div class="animated fadeIn">
+  <div class="card">
+    <div class="card-header">
+      <span>
+        <i class="cui-credit-card icon"></i> All Licenses
+      </span>
+      <span class="ml-auto">
+        Create New
+      </span>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Product Name</th>
+              <th>User Name</th>
+              <th>Valid From</th>
+              <th>Valid To</th>
+              <th>State</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor = "let license of licenses; let i = index">
+              <td>{{license.productName}}</td>
+              <td>{{license.userName}}</td>
+              <td>{{license.validFrom}}</td>
+              <td>{{license.validTo}}</td>
+              <td>
+                <span class="badge badge-success" *ngIf="!license.isDeleted">Active</span>
+                <span class="badge badge-danger" *ngIf="license.isDeleted">Deleted</span>
+              </td>
+            </tr>
+            <!--<tr>
+              <td>Sportimo3 Production</td>
+              <td>pabetoop</td>
+              <td></td>
+              <td>2020/01/15</td>
+              <td>
+                <span class="badge badge-danger">Deleted</span>
+              </td>
+            </tr>-->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
