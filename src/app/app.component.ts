@@ -13,8 +13,8 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.router.events.subscribe((evt) => {
       if (evt instanceof NavigationStart && evt.url !== '/login') {
-        //if (!this.sessionService.token)
-          //this.router.navigate(['login']);
+        if (!this.sessionService.token)
+          this.router.navigate(['login']);
       }
       if (!(evt instanceof NavigationEnd)) {
         return;
