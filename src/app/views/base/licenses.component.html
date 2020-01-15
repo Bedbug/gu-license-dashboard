@@ -1,5 +1,56 @@
+<div bsModal #largeModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-info" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">License Signature (Copy/Paste in another service as USER_TOKEN env variable)</h4>
+        <button type="button" class="close" (click)="largeModal.hide()" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <span>{{licenseSignature}}</span>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" (click)="copyText(licenseSignature)">Copy</button>
+        <button type="button" class="btn btn-secondary" (click)="largeModal.hide()">Close</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
 <div class="animated fadeIn">
-  <div class="card">
+  <div class="row">
+    <div class="col-sm-6 col-lg-3" *ngFor="let license of licenses; let i = index">
+      <div class="card text-white bg-primary">
+        <div class="card-body pb-0">
+          <div class="btn-group float-right" dropdown>
+            <button type="button" class="btn btn-transparent dropdown-toggle p-0" dropdownToggle>
+              <i class="icon-settings"></i>
+            </button>
+            <div class="dropdown-menu dropdown-menu-right" *dropdownMenu>
+              <a class="dropdown-item" data-toggle="modal" (click)="getSignature(license)">Get signature</a>
+            </div>
+          </div>
+          <div (click)="gotoLicense(license)">
+            <div class="input-group mb-3">
+              <div class="input-group-prepend"><span class="input-group-text"><i class="cui-credit-card"></i></span></div>
+              <label style="padding-left:10px">{{license.productName}}</label>
+            </div>
+            <div class="input-group mb-3 text-value">
+              <div class="input-group-prepend"><span class="input-group-text"><i class="icon-user"></i></span></div>
+              <label style="padding-left:10px">{{license.userName}}</label>
+            </div>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend"><span class="input-group-text">@</span></div>
+              <label style="padding-left:10px">{{license.userEmail}}</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!--/.col-->
+  </div>
+  <!--<div class="card">
     <div class="card-header">
       <span>
         <i class="cui-credit-card icon"></i> All Licenses
@@ -22,7 +73,7 @@
           </thead>
           <tbody>
             <tr *ngFor="let license of licenses; let i = index">
-              
+
                 <td><a routerLink="/base/license/{{license.id}}" [state]="license">{{license.productName}}</a></td>
                 <td>{{license.userName}}</td>
                 <td>{{license.validFrom}}</td>
@@ -30,20 +81,12 @@
                 <td>
                   <span class="badge badge-success" *ngIf="!license.isDeleted">Active</span>
                   <span class="badge badge-danger" *ngIf="license.isDeleted">Deleted</span>
-                </td>              
+                </td>
             </tr>
-            <!--<tr>
-              <td>Sportimo3 Production</td>
-              <td>pabetoop</td>
-              <td></td>
-              <td>2020/01/15</td>
-              <td>
-                <span class="badge badge-danger">Deleted</span>
-              </td>
-            </tr>-->
           </tbody>
         </table>
       </div>
     </div>
-  </div>
+  </div>-->
 </div>
+

@@ -44,6 +44,7 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { ChartsModule } from 'ng2-charts';
 import { StorageServiceModule } from 'ngx-webstorage-service';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 @NgModule({
   imports: [
@@ -61,7 +62,8 @@ import { StorageServiceModule } from 'ngx-webstorage-service';
     ChartsModule,
     StorageServiceModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ModalModule
   ],
   declarations: [
     AppComponent,

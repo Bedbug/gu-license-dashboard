@@ -2,6 +2,8 @@
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 import { LicensesComponent } from './licenses.component';
 import { LicenseComponent } from './license.component';
@@ -24,7 +26,9 @@ import { BaseRoutingModule } from './base-routing.module';
     FormsModule,
     BaseRoutingModule,
     PopoverModule.forRoot(),
-    TooltipModule.forRoot()
+    TooltipModule.forRoot(),
+    ModalModule.forRoot(),
+    BsDropdownModule
   ],
   declarations: [
     LicensesComponent,
