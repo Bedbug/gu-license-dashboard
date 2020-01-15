@@ -1,22 +1,15 @@
 {
-  "name": "@coreui/coreui-free-angular-admin-template",
-  "version": "2.7.2",
-  "description": "CoreUI Free Angular 2+ Admin Template",
+  "name": "gu-license-dashboard",
+  "version": "0.1.0",
+  "description": "License Server Admin Dashboard",
   "author": {
-    "name": "Łukasz Holeczek",
-    "url": "http://holeczek.pl",
-    "github": "https://github.com/mrholek",
-    "twitter": "https://twitter.com/lukaszholeczek"
+    "name": "Elias Kalapanidas",
+    "url": "https://adventuresinunity.blogspot.com/",
+    "github": "https://github.com/ekalap"
   },
-  "contributors": [
-    {
-      "name": "Andrzej Kopański",
-      "url": "https://github.com/xidedix"
-    }
-  ],
-  "homepage": "https://coreui.io/angular",
-  "copyright": "Copyright 2019 creativeLabs Łukasz Holeczek",
-  "license": "MIT",
+  "homepage": "https://gu-license-dashboard.herokuapp.com/",
+  "copyright": "Copyleft GPL 3.0",
+  "license": "GPL",
   "scripts": {
     "ng": "ng",
     "postinstall": "ngcc --properties es2015 browser module main --first-only --create-ivy-entry-points",
