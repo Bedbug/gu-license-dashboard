@@ -31,6 +31,7 @@ import { BaseRoutingModule } from './base-routing.module';
     BsDropdownModule
   ],
   declarations: [
+    NavbarsComponent,
     LicensesComponent,
     LicenseComponent
   ]
